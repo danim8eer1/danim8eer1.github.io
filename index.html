@@ -13,21 +13,16 @@
         nav { font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
         nav a { margin-left: 25px; text-decoration: none; color: #eaeaea; }
 
-        /* Carousel Navigation Wrapper */
         .carousel-wrapper { position: relative; padding: 20px 5% 60px; }
         .carousel-container { display: flex; overflow-x: hidden; gap: 20px; scroll-behavior: smooth; }
-        
         .grid-item { flex: 0 0 auto; position: relative; height: 350px; }
         .grid-item a { display: block; height: 100%; position: relative; }
-        
-        /* Plus icon overlay */
         .grid-item a::after { content: '+'; position: absolute; top: 10px; right: 10px; color: white; font-size: 20px; background: rgba(0,0,0,0.5); width: 30px; height: 30px; line-height: 30px; text-align: center; border-radius: 50%; pointer-events: none; }
-        
-        /* Uniform Height, Aspect Ratio Preserved */
         .grid-item img { height: 100%; width: auto; object-fit: contain; display: block; }
         
-        /* Navigation Arrows */
-        .nav-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.1); color: white; border: none; padding: 15px; cursor: pointer; z-index: 10; }
+        .caption { font-size: 12px; margin-top: 10px; color: #888; text-align: left; }
+        
+        .nav-btn { position: absolute; top: 40%; transform: translateY(-50%); background: rgba(255,255,255,0.1); color: white; border: none; padding: 15px; cursor: pointer; z-index: 10; }
         .prev { left: 1%; }
         .next { right: 1%; }
     </style>
@@ -48,26 +43,40 @@
     <main class="carousel-wrapper">
         <button class="nav-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
         <div class="carousel-container" id="carousel">
-            <div class="grid-item"><a href="images/Atrium_View-FINAL.webp"><img src="images/Atrium_View-FINAL.webp"></a></div>
-            <div class="grid-item"><a href="images/Corridor_03-FINAL.webp"><img src="images/Corridor_03-FINAL.webp"></a></div>
-            <div class="grid-item"><a href="images/LA-Galaxy-Supporters-Section-1024x576.webp"><img src="images/LA-Galaxy-Supporters-Section-1024x576.webp"></a></div>
-            <div class="grid-item"><a href="images/D_OOUA7UYAE88BX.webp"><img src="images/D_OOUA7UYAE88BX.webp"></a></div>
-            <div class="grid-item"><a href="images/image-asset.webp"><img src="images/image-asset.webp"></a></div>
-            <div class="grid-item"><a href="images/Wayfarer_DTLA-BM_Lilly_Rose.webp"><img src="images/Wayfarer_DTLA-BM_Lilly_Rose.webp"></a></div>
+            <div class="grid-item"><a href="images/Wayfarer_DTLA-RT_Event_Space.webp"><img src="images/Wayfarer_DTLA-RT_Event_Space.webp"></a><div class="caption">Wayfarer Hotel | Los Angeles, CA</div></div>
+            <div class="grid-item"><a href="images/Wayfarer_DTLA-RT_Dipping_Pool.webp"><img src="images/Wayfarer_DTLA-RT_Dipping_Pool.webp"></a><div class="caption">Wayfarer Hotel | Los Angeles, CA</div></div>
+            <div class="grid-item"><a href="images/Wayfarer_DTLA-RT_Bar.webp"><img src="images/Wayfarer_DTLA-RT_Bar.webp"></a><div class="caption">Wayfarer Hotel | Los Angeles, CA</div></div>
+            <div class="grid-item"><a href="images/IST_Convention.webp"><img src="images/IST_Convention.webp"></a><div class="caption">Istanbul Seaport | Istanbul, Turkey</div></div>
+            <div class="grid-item"><a href="images/IST_Marina.webp"><img src="images/IST_Marina.webp"></a><div class="caption">Istanbul Seaport | Istanbul, Turkey</div></div>
+            <div class="grid-item"><a href="images/Canal_View_Updates.webp"><img src="images/Canal_View_Updates.webp"></a><div class="caption">Tongxi | Hangzhou, China</div></div>
+            <div class="grid-item"><a href="images/luxury_courtyard.webp"><img src="images/luxury_courtyard.webp"></a><div class="caption">Yongsan Dreamhub | Yongsan, Korea</div></div>
+            <div class="grid-item"><a href="images/Aerial_02.webp"><img src="images/Aerial_02.webp"></a><div class="caption">Centerside | San Diego, CA</div></div>
+            <div class="grid-item"><a href="images/Centerside+VU02d+Lake+View_04.webp"><img src="images/Centerside+VU02d+Lake+View_04.webp"></a><div class="caption">Centerside | San Diego, CA</div></div>
+            <div class="grid-item"><a href="images/riverside_2013_0121.webp"><img src="images/riverside_2013_0121.webp"></a><div class="caption">Shops at Riverside | Hackensack, New Jersey</div></div>
+            <div class="grid-item"><a href="images/Court_C_LR_REV+2.webp"><img src="images/Court_C_LR_REV+2.webp"></a><div class="caption">Dongguan International Trade Center | Dongguan, China</div></div>
+            <div class="grid-item"><a href="images/the_bend_2013_0121.webp"><img src="images/the_bend_2013_0121.webp"></a><div class="caption">Shops at Riverside | Hackensack, New Jersey</div></div>
+            <div class="grid-item"><a href="images/EXT_Atrium-1.webp"><img src="images/EXT_Atrium-1.webp"></a><div class="caption">Carrefour Mall | Jakarta, Indonesia</div></div>
+            <div class="grid-item"><a href="images/sp_l-02_west_mural.webp"><img src="images/sp_l-02_west_mural.webp"></a><div class="caption">Wuhan Lot 35 | Wuhan, China</div></div>
+            <div class="grid-item"><a href="images/Escalator_View_Updated.webp"><img src="images/Escalator_View_Updated.webp"></a><div class="caption">China World Trade Center | Beijing, China</div></div>
+            <div class="grid-item"><a href="images/New_Ribbon_01.webp"><img src="images/New_Ribbon_01.webp"></a><div class="caption">China World Trade Center | Beijing, China</div></div>
+            <div class="grid-item"><a href="images/Basement_Metro_Connection.webp"><img src="images/Basement_Metro_Connection.webp"></a><div class="caption">Henderson Mall | Shanghai, China</div></div>
+            <div class="grid-item"><a href="images/8_Shenton_Way_Aerial.webp"><img src="images/8_Shenton_Way_Aerial.webp"></a><div class="caption">Shenton Way | Tanjong Pagar, Singapore</div></div>
+            <div class="grid-item"><a href="images/Jumeirah+Central+by+5+design.webp"><img src="images/Jumeirah+Central+by+5+design.webp"></a><div class="caption">Jumeirah Central | Dubai, UAE</div></div>
+            <div class="grid-item"><a href="images/Master+Plan.webp"><img src="images/Master+Plan.webp"></a><div class="caption">Jumeirah Central | Dubai, UAE</div></div>
+            <div class="grid-item"><a href="images/Eye_Level-Tower.webp"><img src="images/Eye_Level-Tower.webp"></a><div class="caption">Luxelake | Chengdu, China</div></div>
+            <div class="grid-item"><a href="images/se-eye-level-a-louvers.webp"><img src="images/se-eye-level-a-louvers.webp"></a><div class="caption">Luxelake | Chengdu, China</div></div>
+            <div class="grid-item"><a href="images/Lot+6+Resi-white.webp"><img src="images/Lot+6+Resi-white.webp"></a><div class="caption">Sino Ocean | China</div></div>
+            <div class="grid-item"><a href="images/Parcel-4-apt-white.webp"><img src="images/Parcel-4-apt-white.webp"></a><div class="caption">Sino Ocean | China</div></div>
         </div>
         <button class="nav-btn next" onclick="scrollCarousel(1)">&#10095;</button>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
     <script>
-        // Lightbox carousel
         var lightbox = new SimpleLightbox('.carousel-container a', { captionDelay: 250 });
-        
-        // Manual carousel navigation
         function scrollCarousel(direction) {
             const container = document.getElementById('carousel');
-            const scrollAmount = 400; 
-            container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+            container.scrollBy({ left: direction * 400, behavior: 'smooth' });
         }
     </script>
 </body>
