@@ -16,10 +16,10 @@
 
         .carousel-wrapper { position: relative; padding: 0 5%; }
         
-        /* NO SCROLL BAR, BUT SCROLLABLE */
+        /* Hidden scrollbar, functional scrolling */
         .carousel-container { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 30px; scroll-behavior: smooth; padding-bottom: 20px; }
-        .carousel-container::-webkit-scrollbar { display: none; } /* Hide scrollbar for Chrome/Safari */
-        .carousel-container { scrollbar-width: none; } /* Hide scrollbar for Firefox */
+        .carousel-container::-webkit-scrollbar { display: none; }
+        .carousel-container { scrollbar-width: none; }
 
         .grid-item { flex: 0 0 auto; position: relative; height: 350px; }
         .grid-item a { display: block; height: 300px; position: relative; }
@@ -37,7 +37,8 @@
 
     <header>
         <a href="index.html">
-            <img src="images/20190406_polyme-logo.webp" alt="Polyme Visualization" class="logo-img">
+            <!-- Updated to .png for transparency -->
+            <img src="images/20190406_polyme-logo.png" alt="Polyme Visualization" class="logo-img">
         </a>
         <nav>
             <a href="#">Portfolio</a>
@@ -51,6 +52,7 @@
     <main class="carousel-wrapper">
         <button class="nav-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
         <div class="carousel-container" id="carousel">
+            <!-- Full Project List -->
             <div class="grid-item"><a href="images/Atrium_View-FINAL.webp"><img src="images/Atrium_View-FINAL.webp"></a><div class="caption">Linyi Mall | Linyi, China</div></div>
             <div class="grid-item"><a href="images/Corridor_03-FINAL.webp"><img src="images/Corridor_03-FINAL.webp"></a><div class="caption">Linyi Mall | Linyi, China</div></div>
             <div class="grid-item"><a href="images/LA-Galaxy-Supporters-Section-1024x576.webp"><img src="images/LA-Galaxy-Supporters-Section-1024x576.webp"></a><div class="caption">Dignity Health Sports Park | Carson, CA</div></div>
