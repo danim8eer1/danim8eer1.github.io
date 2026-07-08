@@ -34,14 +34,14 @@
         /* MOBILE RESPONSIVENESS */
         @media (max-width: 768px) {
             header { flex-direction: column; align-items: center; gap: 20px; padding: 20px; }
-            nav { margin-top: 0; text-align: center; }
+            nav { text-align: center; margin-top: 0; }
             nav a { margin: 0 10px; font-size: 14px; }
             
             .carousel-container { flex-direction: column; overflow-x: visible; }
             .grid-item { height: auto; margin-bottom: 40px; }
             .grid-item a { height: auto; }
             .grid-item img { width: 100%; height: auto; }
-            .nav-btn { display: none; } /* Hide arrows on mobile */
+            .nav-btn { display: none; }
         }
     </style>
 </head>
@@ -63,7 +63,7 @@
     <main class="carousel-wrapper">
         <button class="nav-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
         <div class="carousel-container" id="carousel">
-            <!-- (Project List remains the same) -->
+            <!-- Full Project List -->
             <div class="grid-item"><a href="images/Atrium_View-FINAL.webp"><img src="images/Atrium_View-FINAL.webp"></a><div class="caption">Linyi Mall | Linyi, China</div></div>
             <div class="grid-item"><a href="images/Corridor_03-FINAL.webp"><img src="images/Corridor_03-FINAL.webp"></a><div class="caption">Linyi Mall | Linyi, China</div></div>
             <div class="grid-item"><a href="images/LA-Galaxy-Supporters-Section-1024x576.webp"><img src="images/LA-Galaxy-Supporters-Section-1024x576.webp"></a><div class="caption">Dignity Health Sports Park | Carson, CA</div></div>
