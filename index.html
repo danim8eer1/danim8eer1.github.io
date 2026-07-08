@@ -4,31 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polyme Visualization</title>
-    <!-- SimpleLightbox for professional image viewing -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.css">
     <style>
-        body { background: #fff; color: #000; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; }
+        /* Dark Mode Colors */
+        body { background: #121212; color: #eaeaea; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; }
         header { padding: 40px 5%; display: flex; justify-content: space-between; align-items: flex-end; }
-        .logo { font-size: 30px; font-weight: bold; line-height: 1.1; }
-        .logo span { font-size: 14px; font-weight: normal; letter-spacing: 2px; }
+        .logo { font-size: 30px; font-weight: bold; line-height: 1.1; color: #fff; }
+        .logo span { font-size: 14px; font-weight: normal; letter-spacing: 2px; color: #888; }
         nav { font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
-        nav a { margin-left: 25px; text-decoration: none; color: #000; }
-        
-        /* Portfolio Grid Layout */
-        .portfolio-grid { 
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 30px; 
+        nav a { margin-left: 25px; text-decoration: none; color: #eaeaea; }
+
+        /* Horizontal Carousel Layout */
+        .carousel-container { 
+            display: flex; 
+            overflow-x: auto; 
+            gap: 20px; 
             padding: 20px 5% 60px; 
-            max-width: 1400px; 
-            margin: 0 auto; 
+            scroll-snap-type: x mandatory; 
         }
-        .grid-item img { width: 100%; height: auto; display: block; transition: opacity 0.2s; }
-        .grid-item img:hover { opacity: 0.8; }
+        .grid-item { min-width: 33%; scroll-snap-align: start; }
+        .grid-item img { width: 100%; height: auto; display: block; }
+        .caption { font-size: 12px; margin-top: 10px; color: #888; }
         
-        /* Responsiveness for mobile/tablets */
-        @media (max-width: 900px) { .portfolio-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 600px) { .portfolio-grid { grid-template-columns: 1fr; } }
+        /* Hide scrollbar for a cleaner look */
+        .carousel-container::-webkit-scrollbar { display: none; }
     </style>
 </head>
 <body>
@@ -45,21 +43,25 @@
     </header>
 
     <main>
-        <div class="portfolio-grid">
-            <div class="grid-item"><a href="images/8_Shenton_Way_Aerial.webp"><img src="images/8_Shenton_Way_Aerial.webp" alt="8 Shenton Way Aerial"></a></div>
-            <div class="grid-item"><a href="images/Aerial_02.webp"><img src="images/Aerial_02.webp" alt="Aerial 02"></a></div>
-            <div class="grid-item"><a href="images/Atrium_View-FINAL.webp"><img src="images/Atrium_View-FINAL.webp" alt="Atrium View"></a></div>
-            <div class="grid-item"><a href="images/Basement_Metro_Connection.webp"><img src="images/Basement_Metro_Connection.webp" alt="Basement Metro"></a></div>
-            <div class="grid-item"><a href="images/Canal_View_Updates.webp"><img src="images/Canal_View_Updates.webp" alt="Canal View"></a></div>
-            <div class="grid-item"><a href="images/Centerside+VU02d+Lake+View_04.webp"><img src="images/Centerside+VU02d+Lake+View_04.webp" alt="Centerside View"></a></div>
-            <div class="grid-item"><a href="images/Corridor_03-FINAL.webp"><img src="images/Corridor_03-FINAL.webp" alt="Corridor View"></a></div>
-            <div class="grid-item"><a href="images/Court_C_LR_REV+2.webp"><img src="images/Court_C_LR_REV+2.webp" alt="Court View"></a></div>
-            <div class="grid-item"><a href="images/D_OOUA7UYAE88BX.webp"><img src="images/D_OOUA7UYAE88BX.webp" alt="Sports Stadium"></a></div>
+        <div class="carousel-container">
+            <!-- Project 1 -->
+            <div class="grid-item">
+                <img src="images/8_Shenton_Way_Aerial.webp" alt="8 Shenton Way">
+                <div class="caption">8 Shenton Way | Singapore</div>
+            </div>
+            <!-- Project 2 -->
+            <div class="grid-item">
+                <img src="images/Aerial_02.webp" alt="Aerial View">
+                <div class="caption">Aerial View | Cityscape</div>
+            </div>
+            <!-- Project 3 -->
+            <div class="grid-item">
+                <img src="images/Atrium_View-FINAL.webp" alt="Atrium View">
+                <div class="caption">Atrium View | Interior</div>
+            </div>
+            <!-- Add more project blocks following this pattern -->
         </div>
     </main>
 
-    <!-- SimpleLightbox activation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
-    <script>var lightbox = new SimpleLightbox('.portfolio-grid a', {});</script>
 </body>
 </html>
