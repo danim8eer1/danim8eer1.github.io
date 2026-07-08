@@ -3,38 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polyme Visualization | Portfolio</title>
+    <title>Polyme Visualization</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.css">
     <style>
-        :root { --bg-color: #121212; --text-main: #eaeaea; --text-muted: #888888; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--bg-color); color: var(--text-main); font-family: Helvetica, Arial, sans-serif; }
-        header { padding: 50px 4%; max-width: 1600px; margin: 0 auto; }
-        .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px 4%; max-width: 1600px; margin: 0 auto; }
-        .grid-item a { display: block; }
-        .grid-item img { width: 100%; height: auto; display: block; margin-bottom: 15px; }
+        body { background: #fff; color: #000; font-family: Helvetica, Arial, sans-serif; margin: 0; }
+        header { padding: 40px 5%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 32px; font-weight: bold; }
+        nav { font-size: 14px; letter-spacing: 1px; }
+        nav a { margin-left: 20px; text-decoration: none; color: #000; text-transform: uppercase; }
+        
+        /* This is what fixes your grid squashing */
+        .portfolio-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px; 
+            padding: 0 5% 50px; 
+            max-width: 1600px; 
+            margin: 0 auto; 
+        }
+        .grid-item img { width: 100%; height: auto; display: block; }
         @media (max-width: 900px) { .portfolio-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .portfolio-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-    <header><h1>POLYME VISUALIZATION</h1></header>
+
+    <header>
+        <div class="logo">POLYME<br><span style="font-size:16px; font-weight:normal;">VISUALIZATION</span></div>
+        <nav>
+            <a href="#">Portfolio</a>
+            <a href="#">Demo Reel</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Shot Breakdown</a>
+        </nav>
+    </header>
+
     <main>
         <div class="portfolio-grid">
-            <!-- Project 1-6 -->
             <div class="grid-item"><a href="images/8_Shenton_Way_Aerial.webp"><img src="images/8_Shenton_Way_Aerial.webp"></a></div>
             <div class="grid-item"><a href="images/Aerial_02.webp"><img src="images/Aerial_02.webp"></a></div>
             <div class="grid-item"><a href="images/Atrium_View-FINAL.webp"><img src="images/Atrium_View-FINAL.webp"></a></div>
             <div class="grid-item"><a href="images/Basement_Metro_Connection.webp"><img src="images/Basement_Metro_Connection.webp"></a></div>
             <div class="grid-item"><a href="images/Canal_View_Updates.webp"><img src="images/Canal_View_Updates.webp"></a></div>
             <div class="grid-item"><a href="images/Centerside+VU02d+Lake+View_04.webp"><img src="images/Centerside+VU02d+Lake+View_04.webp"></a></div>
-            
-            <!-- Add remaining projects here following the same pattern -->
-            <div class="grid-item"><a href="images/Corridor_03-FINAL.webp"><img src="images/Corridor_03-FINAL.webp"></a></div>
-            <div class="grid-item"><a href="images/Court_C_LR_REV+2.webp"><img src="images/Court_C_LR_REV+2.webp"></a></div>
-            <div class="grid-item"><a href="images/D_OOUA7UYAE88BX.webp"><img src="images/D_OOUA7UYAE88BX.webp"></a></div>
         </div>
     </main>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
     <script>var lightbox = new SimpleLightbox('.portfolio-grid a', {});</script>
 </body>
