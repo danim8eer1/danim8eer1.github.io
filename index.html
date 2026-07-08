@@ -16,24 +16,29 @@
 
         .carousel-wrapper { position: relative; padding: 0 5%; }
         
+        /* Carousel: Hidden scrollbar, functional scrolling */
         .carousel-container { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 30px; scroll-behavior: smooth; padding-bottom: 20px; }
         .carousel-container::-webkit-scrollbar { display: none; }
         .carousel-container { scrollbar-width: none; }
 
+        /* Thumbnail Dimensions */
         .grid-item { flex: 0 0 auto; position: relative; height: 700px; }
         .grid-item a { display: block; height: 600px; position: relative; }
         .grid-item a::after { content: '+'; position: absolute; top: 10px; right: 10px; color: white; font-size: 30px; background: rgba(0,0,0,0.5); width: 45px; height: 45px; line-height: 45px; text-align: center; border-radius: 50%; pointer-events: none; }
         .grid-item img { height: 100%; width: auto; object-fit: contain; display: block; }
         .caption { font-size: 16px; margin-top: 15px; color: #888; white-space: nowrap; }
 
+        /* Navigation Buttons */
         .nav-btn { position: absolute; top: 35%; transform: translateY(-50%); background: rgba(255,255,255,0.1); color: white; border: none; padding: 30px; cursor: pointer; z-index: 10; font-size: 24px; }
         .prev { left: 0%; }
         .next { right: 0%; }
 
+        /* MOBILE RESPONSIVENESS */
         @media (max-width: 768px) {
             header { flex-direction: column; align-items: center; gap: 20px; padding: 20px; }
             nav { text-align: center; margin-top: 0; }
             nav a { margin: 0 10px; font-size: 14px; }
+            
             .carousel-container { flex-direction: column; overflow-x: visible; }
             .grid-item { height: auto; margin-bottom: 40px; }
             .grid-item a { height: auto; }
@@ -43,8 +48,11 @@
     </style>
 </head>
 <body>
+
     <header>
-        <a href="index.html"><img src="images/20190406_polyme-logo.png" alt="Polyme Visualization" class="logo-img"></a>
+        <a href="index.html">
+            <img src="images/20190406_polyme-logo.png" alt="Polyme Visualization" class="logo-img">
+        </a>
         <nav>
             <a href="index.html">Portfolio</a>
             <a href="demoreel.html">Demo Reel</a>
@@ -56,7 +64,37 @@
     <main class="carousel-wrapper">
         <button class="nav-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
         <div class="carousel-container" id="carousel">
-             <!-- Projects remain the same -->
+            <!-- Full Project List -->
+            <div class="grid-item"><a href="images/Atrium_View-FINAL.webp"><img src="images/Atrium_View-FINAL.webp"></a><div class="caption">Linyi Mall | Linyi, China</div></div>
+            <div class="grid-item"><a href="images/Corridor_03-FINAL.webp"><img src="images/Corridor_03-FINAL.webp"></a><div class="caption">Linyi Mall | Linyi, China</div></div>
+            <div class="grid-item"><a href="images/LA-Galaxy-Supporters-Section-1024x576.webp"><img src="images/LA-Galaxy-Supporters-Section-1024x576.webp"></a><div class="caption">Dignity Health Sports Park | Carson, CA</div></div>
+            <div class="grid-item"><a href="images/D_OOUA7UYAE88BX.webp"><img src="images/D_OOUA7UYAE88BX.webp"></a><div class="caption">Dignity Health Sports Park | Carson, CA</div></div>
+            <div class="grid-item"><a href="images/image-asset.webp"><img src="images/image-asset.webp"></a><div class="caption">Wayfarer Hotel | Los Angeles, CA</div></div>
+            <div class="grid-item"><a href="images/Wayfarer_DTLA-BM_Lilly_Rose.webp"><img src="images/Wayfarer_DTLA-BM_Lilly_Rose.webp"></a><div class="caption">Wayfarer Hotel | Los Angeles, CA</div></div>
+            <div class="grid-item"><a href="images/Wayfarer_DTLA-RT_Event_Space.webp"><img src="images/Wayfarer_DTLA-RT_Event_Space.webp"></a><div class="caption">Wayfarer Hotel | Los Angeles, CA</div></div>
+            <div class="grid-item"><a href="images/Wayfarer_DTLA-RT_Dipping_Pool.webp"><img src="images/Wayfarer_DTLA-RT_Dipping_Pool.webp"></a><div class="caption">Wayfarer Hotel | Los Angeles, CA</div></div>
+            <div class="grid-item"><a href="images/Wayfarer_DTLA-RT_Bar.webp"><img src="images/Wayfarer_DTLA-RT_Bar.webp"></a><div class="caption">Wayfarer Hotel | Los Angeles, CA</div></div>
+            <div class="grid-item"><a href="images/IST_Convention.webp"><img src="images/IST_Convention.webp"></a><div class="caption">Istanbul Seaport | Istanbul, Turkey</div></div>
+            <div class="grid-item"><a href="images/IST_Marina.webp"><img src="images/IST_Marina.webp"></a><div class="caption">Istanbul Seaport | Istanbul, Turkey</div></div>
+            <div class="grid-item"><a href="images/Canal_View_Updates.webp"><img src="images/Canal_View_Updates.webp"></a><div class="caption">Tongxi | Hangzhou, China</div></div>
+            <div class="grid-item"><a href="images/luxury_courtyard.webp"><img src="images/luxury_courtyard.webp"></a><div class="caption">Yongsan Dreamhub | Yongsan, Korea</div></div>
+            <div class="grid-item"><a href="images/Aerial_02.webp"><img src="images/Aerial_02.webp"></a><div class="caption">Centerside | San Diego, CA</div></div>
+            <div class="grid-item"><a href="images/Centerside+VU02d+Lake+View_04.webp"><img src="images/Centerside+VU02d+Lake+View_04.webp"></a><div class="caption">Centerside | San Diego, CA</div></div>
+            <div class="grid-item"><a href="images/riverside_2013_0121.webp"><img src="images/riverside_2013_0121.webp"></a><div class="caption">Shops at Riverside | Hackensack, New Jersey</div></div>
+            <div class="grid-item"><a href="images/Court_C_LR_REV+2.webp"><img src="images/Court_C_LR_REV+2.webp"></a><div class="caption">Dongguan International Trade Center | Dongguan, China</div></div>
+            <div class="grid-item"><a href="images/the_bend_2013_0121.webp"><img src="images/the_bend_2013_0121.webp"></a><div class="caption">Shops at Riverside | Hackensack, New Jersey</div></div>
+            <div class="grid-item"><a href="images/EXT_Atrium-1.webp"><img src="images/EXT_Atrium-1.webp"></a><div class="caption">Carrefour Mall | Jakarta, Indonesia</div></div>
+            <div class="grid-item"><a href="images/sp_l-02_west_mural.webp"><img src="images/sp_l-02_west_mural.webp"></a><div class="caption">Wuhan Lot 35 | Wuhan, China</div></div>
+            <div class="grid-item"><a href="images/Escalator_View_Updated.webp"><img src="images/Escalator_View_Updated.webp"></a><div class="caption">China World Trade Center | Beijing, China</div></div>
+            <div class="grid-item"><a href="images/New_Ribbon_01.webp"><img src="images/New_Ribbon_01.webp"></a><div class="caption">China World Trade Center | Beijing, China</div></div>
+            <div class="grid-item"><a href="images/Basement_Metro_Connection.webp"><img src="images/Basement_Metro_Connection.webp"></a><div class="caption">Henderson Mall | Shanghai, China</div></div>
+            <div class="grid-item"><a href="images/8_Shenton_Way_Aerial.webp"><img src="images/8_Shenton_Way_Aerial.webp"></a><div class="caption">Shenton Way | Tanjong Pagar, Singapore</div></div>
+            <div class="grid-item"><a href="images/Jumeirah+Central+by+5+design.webp"><img src="images/Jumeirah+Central+by+5+design.webp"></a><div class="caption">Jumeirah Central | Dubai, UAE</div></div>
+            <div class="grid-item"><a href="images/Master+Plan.webp"><img src="images/Master+Plan.webp"></a><div class="caption">Jumeirah Central | Dubai, UAE</div></div>
+            <div class="grid-item"><a href="images/Eye_Level-Tower.webp"><img src="images/Eye_Level-Tower.webp"></a><div class="caption">Luxelake | Chengdu, China</div></div>
+            <div class="grid-item"><a href="images/se-eye-level-a-louvers.webp"><img src="images/se-eye-level-a-louvers.webp"></a><div class="caption">Luxelake | Chengdu, China</div></div>
+            <div class="grid-item"><a href="images/Lot+6+Resi-white.webp"><img src="images/Lot+6+Resi-white.webp"></a><div class="caption">Sino Ocean | China</div></div>
+            <div class="grid-item"><a href="images/Parcel-4-apt-white.webp"><img src="images/Parcel-4-apt-white.webp"></a><div class="caption">Sino Ocean | China</div></div>
         </div>
         <button class="nav-btn next" onclick="scrollCarousel(1)">&#10095;</button>
     </main>
