@@ -6,78 +6,53 @@
     <title>Polyme Visualization</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.css">
     <style>
-        html, body { 
-            background: #121212; 
-            color: #eaeaea; 
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-            margin: 0; 
-            height: 100vh; 
-            overflow: hidden; 
-        }
-
-        /* Header structure */
-        header { padding: 40px 5% 10px; }
-        .header-content { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 10px; }
+        body { background: #121212; color: #eaeaea; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; }
         
-        /* The Red Divider Line */
-        .header-divider { border-bottom: 2px solid #ff0000; margin-bottom: 40px; width: 90%; margin-left: auto; margin-right: auto; }
-
+        /* Header Aligned to Top */
+        header { padding: 40px 5% 40px; display: flex; justify-content: space-between; align-items: flex-start; }
         .logo-img { height: 60px; width: auto; display: block; }
         
-        nav { font-size: 16px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; }
+        nav { font-size: 16px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 10px; }
         nav a { margin-left: 40px; text-decoration: none; color: #eaeaea; }
 
-        .carousel-wrapper { position: relative; padding: 0 5% 40px; }
-        .carousel-container { display: flex; overflow-x: hidden; gap: 30px; scroll-behavior: smooth; }
+        /* Carousel Section */
+        .carousel-wrapper { position: relative; padding: 0 5%; }
+        .carousel-container { display: flex; overflow-x: auto; gap: 30px; scroll-behavior: smooth; padding-bottom: 20px; }
         
         .grid-item { flex: 0 0 auto; position: relative; height: 350px; }
         .grid-item a { display: block; height: 300px; position: relative; }
         .grid-item a::after { content: '+'; position: absolute; top: 10px; right: 10px; color: white; font-size: 20px; background: rgba(0,0,0,0.5); width: 30px; height: 30px; line-height: 30px; text-align: center; border-radius: 50%; pointer-events: none; }
         .grid-item img { height: 100%; width: auto; object-fit: contain; display: block; }
         
-        .caption { font-size: 14px; margin-top: 10px; color: #888; text-align: left; white-space: nowrap; }
-        
-        .nav-btn { position: absolute; top: 40%; transform: translateY(-50%); background: rgba(255,255,255,0.1); color: white; border: none; padding: 20px; cursor: pointer; z-index: 10; font-size: 20px; }
-        .prev { left: 1%; }
-        .next { right: 1%; }
+        .caption { font-size: 14px; margin-top: 10px; color: #888; white-space: nowrap; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="header-content">
-            <a href="index.html">
-                <img src="images/20190406_polyme-logo.png" alt="Polyme Visualization" class="logo-img">
-            </a>
-            <nav>
-                <a href="#">Portfolio</a>
-                <a href="#">Demo Reel</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-                <a href="#">Shot Breakdown</a>
-            </nav>
-        </div>
-        <div class="header-divider"></div>
+        <a href="index.html">
+            <img src="images/20190406_polyme-logo.png" alt="Polyme Visualization" class="logo-img">
+        </a>
+        <nav>
+            <a href="#">Portfolio</a>
+            <a href="#">Demo Reel</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Shot Breakdown</a>
+        </nav>
     </header>
 
     <main class="carousel-wrapper">
-        <button class="nav-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
         <div class="carousel-container" id="carousel">
-            <!-- Project Blocks -->
             <div class="grid-item"><a href="images/Atrium_View-FINAL.webp"><img src="images/Atrium_View-FINAL.webp"></a><div class="caption">Linyi Mall | Linyi, China</div></div>
             <div class="grid-item"><a href="images/Corridor_03-FINAL.webp"><img src="images/Corridor_03-FINAL.webp"></a><div class="caption">Linyi Mall | Linyi, China</div></div>
             <div class="grid-item"><a href="images/LA-Galaxy-Supporters-Section-1024x576.webp"><img src="images/LA-Galaxy-Supporters-Section-1024x576.webp"></a><div class="caption">Dignity Health Sports Park | Carson, CA</div></div>
         </div>
-        <button class="nav-btn next" onclick="scrollCarousel(1)">&#10095;</button>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
     <script>
         var lightbox = new SimpleLightbox('.carousel-container a', { captionDelay: 250 });
-        function scrollCarousel(direction) {
-            const container = document.getElementById('carousel');
-            container.scrollBy({ left: direction * 450, behavior: 'smooth' });
-        }
     </script>
 </body>
 </html>
