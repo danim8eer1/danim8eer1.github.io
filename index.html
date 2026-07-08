@@ -13,16 +13,23 @@
         nav { font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
         nav a { margin-left: 25px; text-decoration: none; color: #eaeaea; }
 
-        .carousel-container { display: flex; overflow-x: auto; gap: 20px; padding: 20px 5% 60px; scroll-snap-type: x mandatory; }
-        .grid-item { min-width: 400px; scroll-snap-align: start; position: relative; }
+        /* Carousel Navigation Wrapper */
+        .carousel-wrapper { position: relative; padding: 20px 5% 60px; }
+        .carousel-container { display: flex; overflow-x: hidden; gap: 20px; scroll-behavior: smooth; }
         
-        .grid-item a { display: block; height: 400px; overflow: hidden; position: relative; }
+        .grid-item { flex: 0 0 auto; position: relative; height: 350px; }
+        .grid-item a { display: block; height: 100%; position: relative; }
+        
         /* Plus icon overlay */
-        .grid-item a::after { content: '+'; position: absolute; top: 10px; right: 10px; color: white; font-size: 24px; background: rgba(0,0,0,0.5); width: 30px; height: 30px; text-align: center; border-radius: 50%; pointer-events: none; }
+        .grid-item a::after { content: '+'; position: absolute; top: 10px; right: 10px; color: white; font-size: 20px; background: rgba(0,0,0,0.5); width: 30px; height: 30px; line-height: 30px; text-align: center; border-radius: 50%; pointer-events: none; }
         
-        .grid-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .caption { font-size: 12px; margin-top: 10px; color: #888; }
-        .carousel-container::-webkit-scrollbar { display: none; }
+        /* Uniform Height, Aspect Ratio Preserved */
+        .grid-item img { height: 100%; width: auto; object-fit: contain; display: block; }
+        
+        /* Navigation Arrows */
+        .nav-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.1); color: white; border: none; padding: 15px; cursor: pointer; z-index: 10; }
+        .prev { left: 1%; }
+        .next { right: 1%; }
     </style>
 </head>
 <body>
@@ -38,9 +45,9 @@
         </nav>
     </header>
 
-    <main>
-        <div class="carousel-container">
-            <!-- Ordered Project List -->
+    <main class="carousel-wrapper">
+        <button class="nav-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
+        <div class="carousel-container" id="carousel">
             <div class="grid-item"><a href="images/Atrium_View-FINAL.webp"><img src="images/Atrium_View-FINAL.webp"></a></div>
             <div class="grid-item"><a href="images/Corridor_03-FINAL.webp"><img src="images/Corridor_03-FINAL.webp"></a></div>
             <div class="grid-item"><a href="images/LA-Galaxy-Supporters-Section-1024x576.webp"><img src="images/LA-Galaxy-Supporters-Section-1024x576.webp"></a></div>
@@ -48,9 +55,20 @@
             <div class="grid-item"><a href="images/image-asset.webp"><img src="images/image-asset.webp"></a></div>
             <div class="grid-item"><a href="images/Wayfarer_DTLA-BM_Lilly_Rose.webp"><img src="images/Wayfarer_DTLA-BM_Lilly_Rose.webp"></a></div>
         </div>
+        <button class="nav-btn next" onclick="scrollCarousel(1)">&#10095;</button>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
-    <script>var lightbox = new SimpleLightbox('.carousel-container a', { captionDelay: 250, animationSlide: true });</script>
+    <script>
+        // Lightbox carousel
+        var lightbox = new SimpleLightbox('.carousel-container a', { captionDelay: 250 });
+        
+        // Manual carousel navigation
+        function scrollCarousel(direction) {
+            const container = document.getElementById('carousel');
+            const scrollAmount = 400; 
+            container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
