@@ -6,13 +6,23 @@
     <title>About | Polyme Visualization</title>
     <style>
         body { background: #121212; color: #eaeaea; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; min-height: 100vh; }
+        
         header { padding: 40px 5% 40px; display: flex; justify-content: space-between; align-items: flex-start; }
         .logo-img { height: 60px; width: auto; display: block; }
+        
         nav { font-size: 16px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 10px; }
         nav a { margin-left: 40px; text-decoration: none; color: #eaeaea; }
+
         .about-wrapper { padding: 40px 10%; display: flex; align-items: flex-start; gap: 60px; max-width: 1200px; margin: 0 auto; }
         .text-block { flex: 1; line-height: 1.6; }
+        .text-block h1 { font-size: 32px; margin-bottom: 20px; }
+        .text-block p { font-size: 16px; color: #ccc; margin-bottom: 20px; }
+        
+        .photo-block { flex-shrink: 0; }
         .photo-block img { width: 400px; height: auto; display: block; border-radius: 4px; }
+        .caption { font-size: 14px; margin-top: 10px; color: #888; }
+
+        /* MOBILE RESPONSIVENESS */
         @media (max-width: 768px) {
             header { flex-direction: column; align-items: center; gap: 20px; padding: 20px; }
             nav { text-align: center; margin-top: 0; }
@@ -23,8 +33,11 @@
     </style>
 </head>
 <body>
+
     <header>
-        <a href="index.html"><img src="images/20190406_polyme-logo.png" alt="Polyme Visualization" class="logo-img"></a>
+        <a href="index.html">
+            <img src="images/20190406_polyme-logo.png" alt="Polyme Visualization" class="logo-img">
+        </a>
         <nav>
             <a href="index.html">Portfolio</a>
             <a href="demoreel.html">Demo Reel</a>
@@ -32,9 +45,19 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
+
     <main class="about-wrapper">
-        <div class="text-block"><h1>About</h1><p>...</p></div>
-        <div class="photo-block"><img src="images/Website_Profilepic_Adjustments.webp" alt="Daniel Gray"></div>
+        <div class="text-block">
+            <h1>About</h1>
+            <p>I started Polyme Visualization in 2004. Since then, I have been working together with other creative professionals to develop their concepts and see them come to fruition. I value open communication with my clients and I strive to convey your design exactly how you imagine.</p>
+            <p>As a lifelong artist, I understand that a huge majority of design comes through inspiration. When I'm not designing in the studio, I'm likely out enjoying nature, attending trade shows, or taking in all of the diverse art, food, culture and music that sparks my creativity.</p>
+            <p>Polyme Visualization is dedicated to making your designs come to life through the use of color, light, animation and atmosphere. I believe that every project wants to tell a story and it's my goal to make that story a best seller.</p>
+        </div>
+        
+        <div class="photo-block">
+            <img src="images/Website_Profilepic_Adjustments.webp" alt="Daniel Gray">
+            <div class="caption">Daniel Gray | Founder</div>
+        </div>
     </main>
 </body>
 </html>
