@@ -1,40 +1,41 @@
-<main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyme Visualization | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.css">
+    <style>
+        :root { --bg-color: #121212; --text-main: #eaeaea; --text-muted: #888888; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: Helvetica, Arial, sans-serif; }
+        header { padding: 50px 4%; max-width: 1600px; margin: 0 auto; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px 4%; max-width: 1600px; margin: 0 auto; }
+        .grid-item a { display: block; }
+        .grid-item img { width: 100%; height: auto; display: block; margin-bottom: 15px; }
+        @media (max-width: 900px) { .portfolio-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .portfolio-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header><h1>POLYME VISUALIZATION</h1></header>
+    <main>
         <div class="portfolio-grid">
-            <!-- 1. 8_Shenton_Way_Aerial -->
-            <div class="grid-item">
-                <a href="images/8_Shenton_Way_Aerial.webp">
-                    <img src="images/8_Shenton_Way_Aerial.webp" alt="8 Shenton Way Aerial">
-                </a>
-            </div>
-            <!-- 2. Aerial_02 -->
-            <div class="grid-item">
-                <a href="images/Aerial_02.webp">
-                    <img src="images/Aerial_02.webp" alt="Aerial 02">
-                </a>
-            </div>
-            <!-- 3. Atrium_View-FINAL -->
-            <div class="grid-item">
-                <a href="images/Atrium_View-FINAL.webp">
-                    <img src="images/Atrium_View-FINAL.webp" alt="Atrium View">
-                </a>
-            </div>
-            <!-- 4. Basement_Metro_Connection -->
-            <div class="grid-item">
-                <a href="images/Basement_Metro_Connection.webp">
-                    <img src="images/Basement_Metro_Connection.webp" alt="Basement Metro">
-                </a>
-            </div>
-            <!-- 5. Canal_View_Updates -->
-            <div class="grid-item">
-                <a href="images/Canal_View_Updates.webp">
-                    <img src="images/Canal_View_Updates.webp" alt="Canal View">
-                </a>
-            </div>
-            <!-- 6. Centerside+VU02d+Lake+View_04 -->
-            <div class="grid-item">
-                <a href="images/Centerside+VU02d+Lake+View_04.webp">
-                    <img src="images/Centerside+VU02d+Lake+View_04.webp" alt="Centerside View">
-                </a>
-            </div>
+            <!-- Project 1-6 -->
+            <div class="grid-item"><a href="images/8_Shenton_Way_Aerial.webp"><img src="images/8_Shenton_Way_Aerial.webp"></a></div>
+            <div class="grid-item"><a href="images/Aerial_02.webp"><img src="images/Aerial_02.webp"></a></div>
+            <div class="grid-item"><a href="images/Atrium_View-FINAL.webp"><img src="images/Atrium_View-FINAL.webp"></a></div>
+            <div class="grid-item"><a href="images/Basement_Metro_Connection.webp"><img src="images/Basement_Metro_Connection.webp"></a></div>
+            <div class="grid-item"><a href="images/Canal_View_Updates.webp"><img src="images/Canal_View_Updates.webp"></a></div>
+            <div class="grid-item"><a href="images/Centerside+VU02d+Lake+View_04.webp"><img src="images/Centerside+VU02d+Lake+View_04.webp"></a></div>
+            
+            <!-- Add remaining projects here following the same pattern -->
+            <div class="grid-item"><a href="images/Corridor_03-FINAL.webp"><img src="images/Corridor_03-FINAL.webp"></a></div>
+            <div class="grid-item"><a href="images/Court_C_LR_REV+2.webp"><img src="images/Court_C_LR_REV+2.webp"></a></div>
+            <div class="grid-item"><a href="images/D_OOUA7UYAE88BX.webp"><img src="images/D_OOUA7UYAE88BX.webp"></a></div>
         </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
+    <script>var lightbox = new SimpleLightbox('.portfolio-grid a', {});</script>
+</body>
+</html>
