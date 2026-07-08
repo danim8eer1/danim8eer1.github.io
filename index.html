@@ -13,25 +13,14 @@
         nav { font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
         nav a { margin-left: 25px; text-decoration: none; color: #eaeaea; }
 
-        /* Fixed-height Carousel */
-        .carousel-container { 
-            display: flex; 
-            overflow-x: auto; 
-            gap: 20px; 
-            padding: 20px 5% 60px; 
-            scroll-snap-type: x mandatory; 
-        }
-        .grid-item { min-width: 400px; scroll-snap-align: start; }
+        .carousel-container { display: flex; overflow-x: auto; gap: 20px; padding: 20px 5% 60px; scroll-snap-type: x mandatory; }
+        .grid-item { min-width: 400px; scroll-snap-align: start; position: relative; }
         
-        /* This forces the uniform vertical height */
-        .grid-item a { display: block; height: 400px; overflow: hidden; }
-        .grid-item img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; /* Keeps aspect ratio while filling the box */
-            display: block; 
-        }
+        .grid-item a { display: block; height: 400px; overflow: hidden; position: relative; }
+        /* Plus icon overlay */
+        .grid-item a::after { content: '+'; position: absolute; top: 10px; right: 10px; color: white; font-size: 24px; background: rgba(0,0,0,0.5); width: 30px; height: 30px; text-align: center; border-radius: 50%; pointer-events: none; }
         
+        .grid-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .caption { font-size: 12px; margin-top: 10px; color: #888; }
         .carousel-container::-webkit-scrollbar { display: none; }
     </style>
@@ -51,21 +40,17 @@
 
     <main>
         <div class="carousel-container">
-            <!-- Project 1 -->
-            <div class="grid-item">
-                <a href="images/8_Shenton_Way_Aerial.webp"><img src="images/8_Shenton_Way_Aerial.webp" alt="8 Shenton Way"></a>
-                <div class="caption">8 Shenton Way | Singapore</div>
-            </div>
-            <!-- Project 2 -->
-            <div class="grid-item">
-                <a href="images/Aerial_02.webp"><img src="images/Aerial_02.webp" alt="Aerial View"></a>
-                <div class="caption">Aerial View | Cityscape</div>
-            </div>
-            <!-- Add more following the pattern above -->
+            <!-- Ordered Project List -->
+            <div class="grid-item"><a href="images/Atrium_View-FINAL.webp"><img src="images/Atrium_View-FINAL.webp"></a></div>
+            <div class="grid-item"><a href="images/Corridor_03-FINAL.webp"><img src="images/Corridor_03-FINAL.webp"></a></div>
+            <div class="grid-item"><a href="images/LA-Galaxy-Supporters-Section-1024x576.webp"><img src="images/LA-Galaxy-Supporters-Section-1024x576.webp"></a></div>
+            <div class="grid-item"><a href="images/D_OOUA7UYAE88BX.webp"><img src="images/D_OOUA7UYAE88BX.webp"></a></div>
+            <div class="grid-item"><a href="images/image-asset.webp"><img src="images/image-asset.webp"></a></div>
+            <div class="grid-item"><a href="images/Wayfarer_DTLA-BM_Lilly_Rose.webp"><img src="images/Wayfarer_DTLA-BM_Lilly_Rose.webp"></a></div>
         </div>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
-    <script>var lightbox = new SimpleLightbox('.carousel-container a', {});</script>
+    <script>var lightbox = new SimpleLightbox('.carousel-container a', { captionDelay: 250, animationSlide: true });</script>
 </body>
 </html>
